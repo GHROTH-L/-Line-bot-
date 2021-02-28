@@ -52,7 +52,7 @@ line_bot_api = LineBotApi('b6y8VTNiQP64KhlPbnDcThDxE8nlANSv24zIByWJHuIEFadkA9Xuf
 handler = WebhookHandler('0afc32a47a632b5e89f9a6d8d6ea8cb3')#使用者channel secret
 
 
-# In[3]:
+# In[6]:
 
 
 @app.route("/callback", methods=['POST'])
@@ -66,11 +66,11 @@ def callback():
     return 'OK'
 
 @handler.add(MessageEvent, message=TextMessage)
-'''
-如果傳送的是@傳送位置，則讓他展開quick ryply 並且讓它定位自己的位置
-如果是其他的，就跳出template 並且讓他選擇填寫表單或者傳送位置
-'''
 def handle_message(event):
+    '''
+    如果傳送的是@傳送位置，則讓他展開quick ryply 並且讓它定位自己的位置
+    如果是其他的，就跳出template 並且讓他選擇填寫表單或者傳送位置 
+    '''
     mtext = event.message.text
     if mtext == '@傳送地點':
         message =  TextSendMessage(
@@ -221,7 +221,7 @@ def handle_location_message(event):
                             event.reply_token,message)
 
 
-# In[4]:
+# In[7]:
 
 
 #這邊要想模型
