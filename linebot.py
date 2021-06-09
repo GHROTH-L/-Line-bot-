@@ -48,8 +48,8 @@ from haversine import haversine, Unit
 # In[2]:
 
 
-line_bot_api = LineBotApi('b6y8VTNiQP64KhlPbnDcThDxE8nlANSv24zIByWJHuIEFadkA9Xuf1YfzN8D6UNkoEGHIDdHJU7CUQV1WLWwd5+yshKv5LidrGEC643UDhrwMNawmLulQMHogNfcsgHOLMoNYXU3LifOkEEkzzdVmAdB04t89/1O/w1cDnyilFU=')
-handler = WebhookHandler('0afc32a47a632b5e89f9a6d8d6ea8cb3')#使用者channel secret
+line_bot_api = LineBotApi('')
+handler = WebhookHandler('')#使用者channel secret
 
 
 # In[6]:
